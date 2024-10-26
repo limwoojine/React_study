@@ -1,0 +1,55 @@
+.PokeListItem {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 10px;
+}
+
+.card {
+   background-color: white; /* 카드 배경색 */
+   border: 1px solid #ddd; /* 테두리 */
+   border-radius: 10px; /* 둥근 모서리 */
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 그림자 */
+   overflow: hidden; /* 카드 내용이 카드 경계를 넘지 않도록 */
+   width: 100%; /* 카드 너비 */
+   text-align: center; /* 텍스트 중앙 정렬 */
+   cursor: pointer; /* 클릭할 수 있는 요소로 보이도록 */
+   transition: transform 0.2s; /* 호버 시 애니메이션 */
+}
+
+.card:hover {
+   transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+.image {
+   width: 100%; /* 이미지 너비를 카드에 맞춤 */
+   height: auto; /* 비율 유지 */
+}
+
+.poke-text {
+   padding: 10px; /* 텍스트와 카드 가장자리 사이의 여백 */
+   margin-top: 10px;
+   font-size: 16px; /* 텍스트 크기 */
+   font-weight: bold; /* 굵은 텍스트 */
+}
+
+.PokeListItem:nth-child(even) {
+   background: #f8f9fa;
+}
+
+.PokeListItem .remove {
+   display: flex;
+   align-items: center;
+   font-size: 1.5rem;
+   color: #c72d2d;
+   cursor: pointer;
+}
+
+.PokeListItem .remove:hover {
+   color: #ff8787;
+}
+
+.PokeListItem .image {
+   width: 150px;
+   height: 200px;
+}
