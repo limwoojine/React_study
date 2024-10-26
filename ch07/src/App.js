@@ -4,6 +4,12 @@ import TodoList from './components/TodoList';
 import TodoTemplate from './components/TodoTemplate';
 import React, { useState, useRef, useCallback } from 'react';
 
+/*
+   추가 예정 목록
+   1. Component를 추가하여 All, Check, Uncheck 별로 목록 표시
+   2. 추가한 목록이 없을 때 '목록이 없습니다.' 화면 표시
+*/
+
 function App() {
    const [todos, setTodos] = useState([
       {
