@@ -21,6 +21,7 @@ function IternationSample5() {
          id: nextId, // 5
          text: inputText, // input창에서 사용자가 입력한 값
       });
+
       setNames(nextNames); // names state를 합친 배열로 변경
       setNextId(nextId + 1); // 다음에 데이터 추가 시 nextId를 1씩 증가시키기 위해
       setInputText('');

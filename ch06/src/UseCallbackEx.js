@@ -16,17 +16,17 @@ function UseCallbackEx() {
    const [list, setList] = useState([]);
    const [number, setNumber] = useState('');
 
-
-   const onChange = useCallback((e) => { setNumber(e.target.value) }, [])
+   const onChange = useCallback((e) => {
+      setNumber(e.target.value);
+   }, []);
    const onInsert = (e) => {
-      useCallback(
-         (e) => {
-            const nextList = list.concat(parseInt(number));
-            setList(nextList);
-            setNumber('')
-         }), [number, list]
-   }
-   }
+      useCallback((e) => {
+         const nextList = list.concat(parseInt(number));
+         setList(nextList);
+         setNumber('');
+      }),
+         [number, list];
+   };
 
    //list state가 바뀔 때만 getAverage() 함수 실행
    const avg = useMemo(() => getAverage(list), [list]);
