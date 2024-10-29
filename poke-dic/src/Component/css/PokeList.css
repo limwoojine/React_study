@@ -1,12 +1,23 @@
 .PokeList {
-   display: flex; /* Flexbox 사용 */
-   flex-wrap: wrap; /* 카드가 다음 줄로 넘어가도록 설정 */
-   justify-content: center; /* 가운데 정렬 */
-   padding: 10px; /* 내부 여백 */
+   display: flex;
+   /* flex-wrap-wrap : 부모 넓이보다 요소들의 총 넓ㄹ이가 크다면 나머지 요소들을 다음줄로 바꿈 */
+   flex-wrap: wrap;
+   justify-content: center;
+   padding: 10px;
 }
 
 .PokeListItem {
-   flex: 0 0 calc(33.33% - 20px); /* 각 카드는 3개씩 배치, 마진을 고려 */
-   margin: 5px; /* 카드 간 간격 */
+   flex: 1 1 calc(33.33% - 20px); /* 각 카드는 3개씩 배치, 마진을 고려 */
+   margin: 10px; /* 카드 간 간격 */
    box-sizing: border-box; /* 패딩과 마진을 포함하여 크기 계산 */
+}
+
+.empty-message {
+   display: flex;
+   font-size: 1.5rem;
+   color: Black;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   height: 200px;
 }

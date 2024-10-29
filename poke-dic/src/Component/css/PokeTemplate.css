@@ -9,9 +9,11 @@
    background: #0188ef;
    color: aliceblue;
    height: 64px;
-   font-weight: 700;
-   font-size: 24px;
+   font-weight: bold;
+   font-size: 32px;
    display: flex;
+   /*align-items : display가 flex 속성일 때 vertical 정렬할 때 사용*/
    align-items: center;
+   /* justify-content : horizontal 정렬*/
    justify-content: center;
 }

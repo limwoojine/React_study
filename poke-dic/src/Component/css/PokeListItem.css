@@ -18,35 +18,40 @@
 }
 
 .card:hover {
-   transform: scale(1.05); /* 호버 시 확대 효과 */
+   transform: scale(1.05); /* hover 시 확대 효과 */
+}
+.delete-icon {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: #3479c2;
+   font-size: 1.2rem;
+   display: none; /* 기본으로 숨김 */
+   cursor: pointer;
+   background-color: rgba(255, 255, 255, 0.7); /* 아이콘 배경 */
+   border-radius: 50%;
+   padding: 5px;
+}
+.card:hover .delete-icon {
+   /* hover 시 Delete 아이콘 출력*/
+   display: block;
 }
 
-.image {
-   width: 100%; /* 이미지 너비를 카드에 맞춤 */
-   height: auto; /* 비율 유지 */
+.inactive {
+   /* 비활성화 시 반투명 처리 */
+   opacity: 0.5;
+   /* 클릭 불가 상태 */
+   pointer-events: none;
 }
-
 .poke-text {
    padding: 10px; /* 텍스트와 카드 가장자리 사이의 여백 */
    margin-top: 10px;
    font-size: 16px; /* 텍스트 크기 */
    font-weight: bold; /* 굵은 텍스트 */
 }
-
-.PokeListItem:nth-child(even) {
-   background: #f8f9fa;
-}
-
-.PokeListItem .remove {
-   display: flex;
-   align-items: center;
-   font-size: 1.5rem;
-   color: #c72d2d;
-   cursor: pointer;
-}
-
-.PokeListItem .remove:hover {
-   color: #ff8787;
+.inactive .poke-text {
+   opacity: 0.5; /* 비활성화 시 반투명 처리 */
+   filter: grayscale(100%); /* 흑백으로 처리 */
 }
 
 .PokeListItem .image {

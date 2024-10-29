@@ -6,7 +6,9 @@
 .PokeInsert input {
    background: none;
    outline: none;
+   /* border : input 박스 테두리*/
    border: none;
+   /* rem : rem에서 r은 root, 즉 최상위 엘리먼트에서 지정된 font-size의 값을 기준으로 변환 (일반적으로 1rem = 16px) */
    padding: 0.5rem;
    font-size: 1.125rem;
    line-height: 1.5;
@@ -19,7 +21,6 @@
 }
 
 .PokeInsert button {
-   background: none;
    outline: none;
    border: none;
    background: #868e96;
@@ -30,7 +31,6 @@
    display: flex;
    align-items: center;
    cursor: pointer;
-   transition: background 0.1s ease-in;
 }
 
 .PokeInsert button:hover {
